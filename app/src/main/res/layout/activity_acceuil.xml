@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/mon1"
+    android:layout_height="match_parent">
+
+
+    <Button
+            android:id="@+id/button1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="printStarter"
+            android:text="entrer"
+            android:textColor="#8A2BE2"
+            android:textStyle="bold"
+            android:shadowRadius="19"
+            android:background="@drawable/button"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="380dp"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="printStarter"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/button"
+            android:textColor="#8A2BE2"
+            android:text="Rentrer"
+            android:shadowRadius="19"
+            android:layout_marginTop="380dp"
+            android:layout_alignParentRight="true"/>
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:background="@drawable/apropos"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:text="A propos"
+        android:textColor="#e7ff47"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Première Edition "
+        android:shadowColor="#70E0"
+        android:shadowDx="4"
+        android:shadowDy="-4"
+        android:shadowRadius="1"
+        android:textColor="#0033CC"
+        android:textSize="20sp"
+        android:id="@+id/textView5"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button1" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CHANTS DE VIE"
+        android:textColor="#6600FF"
+        android:textStyle="bold"
+        android:textSize="38sp"
+        android:id="@+id/textView"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageView2"
+        android:background="@drawable/bon9"
+        android:layout_alignParentTop="true"
+        android:rotationX="30"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp" />
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Poussez vers l'éternel des crient de joie. Vous tous habitant de la terre. Servez l'éternel avec joie, venez avec l'allégresse dans sa ...  Ps. 100"
+        android:textColor="#330033"
+        android:textSize="19sp"
+        android:id="@+id/textView3"
+        android:layout_marginTop="275dp"
+        android:textStyle="italic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
