@@ -8,5 +8,7 @@
     <string name="title_activity_page">PageActivity</string>\
     <string name="title_activity_acceuil">Acceuil</string>
     <string name="title_activity_apropos">A propos</string>
+    <string name="namelabel">"Name : "</string>
+    <string name="numberlabel">"Number : "</string>
 
 </resources>

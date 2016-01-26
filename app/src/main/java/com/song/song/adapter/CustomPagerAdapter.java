@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.song.song.R;
-import com.song.song.model.Store;
+import com.song.song.model.SongBook;
 
 import java.util.List;
 
@@ -19,9 +19,9 @@ import java.util.List;
 public class CustomPagerAdapter extends PagerAdapter {
 
     private Context mContext;
-    private List<Store> stores;
+    private List<SongBook> stores;
 
-    public CustomPagerAdapter(Context mContext, List<Store> stores) {
+    public CustomPagerAdapter(Context mContext, List<SongBook> stores) {
         this.mContext = mContext;
         this.stores = stores;
 
@@ -39,7 +39,7 @@ public class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup collection, int position) {
-        Store store = stores.get(position);
+        SongBook store = stores.get(position);
         TextView lyricView;
 
         LayoutInflater inflater = LayoutInflater.from(mContext);

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.song.song.R;
 import com.song.song.activity.SongActivity;
-import com.song.song.model.Store;
+import com.song.song.model.SongBook;
 
 import java.util.ArrayList;
 
@@ -22,14 +22,14 @@ import java.util.ArrayList;
 
         public class CustomAdapter extends BaseAdapter {
 
-            ArrayList<Store> myList = new ArrayList<Store>();
+            ArrayList<SongBook> myList = new ArrayList<SongBook>();
             Context context;
-            Store store;
+            SongBook store;
 
             // on passe le context afin d'obtenir un LayoutInflater pour utiliser notre
             // row_layout.xml
             // on passe les valeurs de notre à l'com.example.sarah.listview.adapter
-            public CustomAdapter(Context context, ArrayList<Store> myList) {
+            public CustomAdapter(Context context, ArrayList<SongBook> myList) {
                 this.myList = myList;
                 this.context = context;
             }
@@ -42,7 +42,7 @@ import java.util.ArrayList;
 
             // retourne un élément de notre liste en fonction de sa position
             @Override
-            public Store getItem(int position) {
+            public SongBook getItem(int position) {
                 return myList.get(position);
             }
 
@@ -69,7 +69,7 @@ import java.util.ArrayList;
                     mViewHolder.textViewName = (TextView) convertView
                             .findViewById(R.id.textViewName);
                     mViewHolder.textViewAge = (TextView) convertView
-                            .findViewById(R.id.textViewAge);
+                            .findViewById(R.id.textViewNumber);
                     mViewHolder.imageView = (ImageView) convertView
                             .findViewById(R.id.imageView);
 
@@ -82,7 +82,7 @@ import java.util.ArrayList;
                 }
 
                 // nous récupérons l'item de la liste demandé par getView
-                final Store store = getItem(position);
+                final SongBook store = getItem(position);
 
                 // nous pouvons attribuer à nos vues les valeurs de l'élément de la liste
                 mViewHolder.textViewName.setText(store.getName());

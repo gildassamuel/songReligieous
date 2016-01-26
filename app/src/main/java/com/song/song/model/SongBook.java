@@ -1,17 +1,21 @@
 package com.song.song.model;
 
+import android.support.v4.view.PagerAdapter;
+
+import com.parse.ParseObject;
+
 import java.io.Serializable;
 
 /**
  * Created by sarah on 10/22/theme.
  */
-public class Store implements Serializable {
+public class SongBook extends ParseObject implements Serializable {
     private String name;
     private int imageId;
     private int number;
     private String lyrics;
 
-    public Store(String name, int number, int imageId, String lyrics) {
+    public SongBook(String name, int number, int imageId, String lyrics) {
         this.name = name;
         this.imageId = imageId;
         this.number= number;
@@ -52,7 +56,7 @@ public class Store implements Serializable {
 
     @Override
     public String toString() {
-        return "Store{" +
+        return "SongBook{" +
                 "name='" + name + '\'' +
                 ", imageId=" + imageId +
                 ", number=" + number +

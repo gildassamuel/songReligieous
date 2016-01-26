@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 import com.song.song.R;
 import com.song.song.adapter.CustomPagerAdapter;
-import com.song.song.model.Store;
+import com.song.song.model.SongBook;
 
 import java.util.ArrayList;
 
@@ -133,10 +133,10 @@ public class SongActivity extends AppCompatActivity {
                 R.drawable.mon5, R.drawable.mon5, R.drawable.mon5,
                 R.drawable.mon5, R.drawable.mon5, R.drawable.mon5  };
 
-        final ArrayList<Store> myList = new ArrayList<Store>();
+        final ArrayList<SongBook> myList = new ArrayList<SongBook>();
 
         for (int i = 0; i < names.length; i++) {
-            myList.add(new Store(names[i], number[i], images[i], lyric[i]));
+            myList.add(new SongBook(names[i], number[i], images[i], lyric[i]));
         }
 
         customPagerAdapter = new CustomPagerAdapter(this,myList);
@@ -166,7 +166,7 @@ public class SongActivity extends AppCompatActivity {
 
 
             //Intent intent = getIntent();
-       //listItem = (Store)intent.getSerializableExtra("samuel");
+       //listItem = (SongBook)intent.getSerializableExtra("samuel");
 
         //lyricView = (TextView)findViewById(R.id.song1);
         //lyricView.setText(listItem.getLyrics());
