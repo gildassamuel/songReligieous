@@ -20,8 +20,8 @@ public class AppController extends Application {
           Parse.enableLocalDatastore(this);
         Parse.initialize(this, "mguJKhzhaLLfwBR40DEQmmLERI4ZQzUKDU0b0yH0", "g48Vs9NLoje8nQccg010d2LK8oUHGGYX9B1qKoWu");
 
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
+        ParseObject Songbook = new ParseObject("Songbook");
+        Songbook.put("foo", "bar");
+        Songbook.saveInBackground();
     }
 }

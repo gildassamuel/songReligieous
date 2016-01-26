@@ -19,7 +19,6 @@ public class AproposActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apropos);
 
-        deMoi = (TextView)findViewById(R.id.about_app);
         sText = "  CHANTS DE VIE\n" +
                 "    --------------------------------------------\n" +
                 "\n" +
@@ -45,6 +44,6 @@ public class AproposActivity extends AppCompatActivity {
                 "\t- Nta Christine,\n" +
                 "\t- Mes frère et sœur de l'AME,\n" +
                 "\t- Muriel Moukoury";
-        deMoi.setText(sText);
+
     }
 }
