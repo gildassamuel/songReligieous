@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     Toolbar toolbar;
-        Context context;
+    Context context;
 
 
     CustomPagerAdapter customPagerAdapter;
