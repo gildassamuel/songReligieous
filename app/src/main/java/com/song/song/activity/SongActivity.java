@@ -12,7 +12,7 @@ import com.song.song.R;
 import com.song.song.adapter.CustomPagerAdapter;
 import com.song.song.model.SongBook;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class SongActivity extends AppCompatActivity {
 
@@ -21,6 +21,7 @@ public class SongActivity extends AppCompatActivity {
     CustomPagerAdapter customPagerAdapter;
     Intent intent;
     int position;
+    List<SongBook> myList;
 
 
 
@@ -29,13 +30,14 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view);
         intent = getIntent();
+        myList = intent.getParcelableArrayListExtra("myList");
         position = intent.getIntExtra("position", 0);
         toolbar = (Toolbar)findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(toolbar);
 
         viewPager = (ViewPager)findViewById(R.id.viewpager);
 
-        String[] names = new String[] { "1. ALLELUIA! LE SEIGNEUR DIEU ", "2. AMEN! AMEN!",
+       /* String[] names = new String[] { "1. ALLELUIA! LE SEIGNEUR DIEU ", "2. AMEN! AMEN!",
                 "3. CE QUE DIEU A FAIT POUR MOI ", "4. EN JESUS, J’AI TROUVE", "5. I HAVE SEEN THE LIGHT ", "6. LOUONS L’ETERNEL",
                 "7. NUL N’EST SAINT COMME L’ETERNEL", "8. QUI EST COMME TOI", "9. SAINT, SAINT, SAINT, EST L’ETERNEL",
                 "10. A DIEU SOIT LA GLOIRE!"};
@@ -137,7 +139,7 @@ public class SongActivity extends AppCompatActivity {
 
         for (int i = 0; i < names.length; i++) {
             myList.add(new SongBook(names[i], number[i], images[i], lyric[i]));
-        }
+        }*/
 
         customPagerAdapter = new CustomPagerAdapter(this,myList);
 

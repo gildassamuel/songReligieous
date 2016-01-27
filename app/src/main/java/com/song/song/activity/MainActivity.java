@@ -18,11 +18,12 @@ import android.widget.Toast;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.song.song.R;
-import com.song.song.adapter.CustomPagerAdapter;
+import com.song.song.adapter.CustomAdapter;
 import com.song.song.model.SongBook;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,9 +35,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog mProgressDialog;
     ArrayAdapter<String> adapter;
     Context context;
-
-
-    CustomPagerAdapter customPagerAdapter;
+    CustomAdapter customAdapter;
+    ArrayList<SongBook> myList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params) {
             // Locate the class table named "Country" in Parse.com
-            ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("SongBook");
+            ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Songbook");
 
             try {
                 ob = query.find();
@@ -194,16 +194,30 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             // Locate the listview in listview_main.xml
+             myList = new ArrayList<SongBook>();
 
             // Pass the results into an ArrayAdapter
-            adapter = new ArrayAdapter<String>(MainActivity.this,
-                    R.layout.activity_listview);
+            /*adapter = new ArrayAdapter<String>(MainActivity.this,
+                    R.layout.activity_listview);*/
             // Retrieve object "name" from Parse.com database
-            for (ParseObject songbook : ob) {
+
+           /* for (ParseObject songbook : ob) {
                 adapter.add((String) songbook.get("name"));
+            }*/
+
+            for (ParseObject songbookParse : ob) {
+                SongBook songBook = new SongBook();
+                songBook.setLyrics((String)songbookParse.get("lyrics"));
+                songBook.setImageId((int) songbookParse.get("imageId"));
+                songBook.setName((String) songbookParse.get("name"));
+                songBook.setNumber((int) songbookParse.get("number"));
+                myList.add(songBook);
+
             }
+            customAdapter = new CustomAdapter(context,myList);
+
             // Binds the Adapter to the ListView
-            listview.setAdapter(adapter);
+            listview.setAdapter(customAdapter);
             // Close the progressdialog
             mProgressDialog.dismiss();
             // Capture button clicks on ListView items

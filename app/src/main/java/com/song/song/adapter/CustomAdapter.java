@@ -88,14 +88,14 @@ import java.util.ArrayList;
                 mViewHolder.textViewName.setText(store.getName());
                 mViewHolder.textViewAge.setText(String.valueOf(" Page: " + store.getNumber())
                   );
-                mViewHolder.imageView.setImageResource(store.getImageId());
+                //mViewHolder.imageView.setImageResource(store.getImageId());
 
                 convertView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
                         Intent intent =new Intent(context,SongActivity.class);
-                        intent.putExtra("sarah", store);
+                        intent.putExtra("myList", myList);
 
                         intent.putExtra("position",position);
                         context.startActivity(intent);
