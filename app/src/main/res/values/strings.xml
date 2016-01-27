@@ -8,7 +8,11 @@
     <string name="title_activity_page">PageActivity</string>\
     <string name="title_activity_acceuil">Acceuil</string>
     <string name="title_activity_apropos">A propos</string>
+
     <string name="namelabel">"Name : "</string>
     <string name="numberlabel">"Number : "</string>
+
+    <string name="action_share">Partager</string>
+    <string name="share_with">Partager avec vos amis</string>
 
 </resources>

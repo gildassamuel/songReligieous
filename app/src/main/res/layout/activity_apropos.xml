@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bon">
 
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="46dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text=" CHANTS DE VIE"
+        android:textColor="#00BFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"
         android:id="@+id/textView2"
         android:paddingTop="10dp"
         android:layout_gravity="center_horizontal" />
@@ -18,35 +22,49 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="  ***********"
+        android:textColor="#F2BB66"
+        android:textSize="18dp"
         android:id="@+id/textView4"
         android:layout_gravity="center_horizontal" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="245dp"
+        android:layout_height="match_parent"
         android:id="@+id/scrollView2"
         android:layout_gravity="center_horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:paddingLeft="45dp"
+            android:text="   ----------------------------\n
+
+  Recueil de cantiques pour\n
+	réunions d'évangélisation,\n
+	d\'édification, mission de\n
+	réveil et école du dimanche etc.\n\n
+  ----------------------------\n
+	Cette application a été créée par\n
+	Sarah Joëlle Nta; Informaticienne\n
+	et automaticienne pour la gloire\n
+		    de Dieu.\n\n
+	---------------------------\n
+
+	           Je tiens à remercier :\n\n
+	- Le Dieu tout puissant, \n
+	- Tout le personnel de DART TC,\n
+	- Gaston Ndoumbe,\n
+	- Jean Luc Nta,\n
+	- Nta Emmanuel,\n
+	- Nta Christine,\n
+	- Mes frères et sœurs de l\'AME,\n
+	- Muriel Moukoury\n
+	- Dongmo Samuel"
+
+            android:paddingLeft="25dp"
+            android:textColor="#556B2F"
+            android:textSize="18dp"
             android:id="@+id/textView6" />
     </ScrollView>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView3" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/about_app" />
-    </ScrollView>
-
 
 </LinearLayout>
 

@@ -27,7 +27,7 @@ public class SongActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.viewer);
+        setContentView(R.layout.view);
         intent = getIntent();
         position = intent.getIntExtra("position", 0);
         toolbar = (Toolbar)findViewById(R.id.toolbar_actionbar);
